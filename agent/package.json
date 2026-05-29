@@ -5,10 +5,10 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node --env-file=.env index.js",
+    "start": "node init && node --env-file=.env index.js",
     "notifications": "node --loader ts-node/esm notification-monitor.ts",
     "test": "node --loader ts-node/esm goal-projection.ts",
-    "build": "tsc",
+    "build": "node init && tsc",
     "read-balances": "node --loader ts-node/esm balance-reader.ts"
   },
   "dependencies": {
